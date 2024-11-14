@@ -45,21 +45,9 @@ int main(){
                 c1 = y;
                 count+=y;
             }
-            // cout<<x<<" "<<y<<nl;
-            // cout <<c<<" "<<c1<<" "<<count<<nl;
         }
         cout <<count<<nl;
     }
     
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
