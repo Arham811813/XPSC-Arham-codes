@@ -29,12 +29,11 @@ void work(){
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
+    work();
     int t;
     cin>>t;
     while (t--) {
-        work();
-        // for(int val : allpalele) cout<< val<<" ";
-        // nel;
+
         int n;
         cin>>n;
         vector<int>v(n),cnt(maxel);
@@ -43,7 +42,7 @@ int main(){
             cin>>v[i];
             cnt[v[i]]++;
         }
-        ll ans = n;
+        ll ans = 0;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < allpalele.size(); j++)
@@ -51,6 +50,7 @@ int main(){
                 int cur = v[i]^allpalele[j];
                 ans+=cnt[cur];
             }
+            if(cnt[v[i]] != 0) cnt[v[i]]--;
         }
         cout<<ans <<nl;
     }
